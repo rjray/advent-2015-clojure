@@ -28,6 +28,8 @@ Still simple, so far. Part 1 was just math-processing, and part 2 was different 
 
 Day 3 (--/--).
 
+Here, part 1 was simple as expected, but I anticipated the wrong twist for part 2. As a result, part 2 wasn't able to reuse very much from part 1.
+
 ## [day04.clj](day04.clj)
 
 Day 4 (--/--).
