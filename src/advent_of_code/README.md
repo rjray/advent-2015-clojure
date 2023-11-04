@@ -6,13 +6,23 @@ Here is a breakdown of the various files in this directory. Files with names of 
 
 The numbers in parentheses in the descriptions of the files represent the rank I had for when my solutions were submitted and accepted. Time, if given, is a rough estimate of how long it took to solve both halves.
 
+(Since this was done in 2023, there are no rankings or times recorded.)
+
 ## [day01.clj](day01.clj)
 
 Day 1 (--/--).
 
+Simple parsing of parentheses, a la S-expressions in a way. Part 2 was just creating an invariant to exit as soon as the floor-number dropped below 0.
+
 ## [day02.clj](day02.clj)
 
 Day 2 (--/--).
+
+Still simple, so far. Part 1 was just math-processing, and part 2 was different math-processing. In part 1, I initially wanted to have two utility defn's, one to split the numbers from the line and one to do the calculation. I ended up bundling them together, and then part 2 would have been a snap if I had kept the separate defn for splitting numbers. But then, after the fact, I remembered having exactly this utility function in `utils.clj`...
+
+## [day02bis.clj](day02bis.clj)
+
+...so I went ahead and made an improvement file. It just replaces the explicit `defn` that split the numbers with calls to `parse-out-longs` from `utils.clj`, and adds some comments.
 
 ## [day03.clj](day03.clj)
 
