@@ -34,6 +34,10 @@ Here, part 1 was simple as expected, but I anticipated the wrong twist for part 
 
 Day 4 (--/--).
 
+Part 1 went fine, but a small logic error kept my part 2 from working for the longest time. I looked over past solutions, which told me that the answer shouldn't have taken too terribly long, which in turn told me it was in my code.
+
+There is probably a more algortihmic way of solving either of these parts, but this worked.
+
 ## [day05.clj](day05.clj)
 
 Day 5 (--/--).
