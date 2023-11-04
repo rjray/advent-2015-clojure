@@ -42,11 +42,13 @@ There is probably a more algortihmic way of solving either of these parts, but t
 
 Day 5 (--/--).
 
-## [day06.clj](day06.clj)
-
 Simple regexp applications.
 
+## [day06.clj](day06.clj)
+
 Day 6 (--/--).
+
+The first somewhat-tricky one. Part 1 went fine, but part 2 tricked me (causing my first wrong answer already).
 
 ## [day07.clj](day07.clj)
 
