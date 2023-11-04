@@ -44,6 +44,8 @@ Day 5 (--/--).
 
 ## [day06.clj](day06.clj)
 
+Simple regexp applications.
+
 Day 6 (--/--).
 
 ## [day07.clj](day07.clj)
