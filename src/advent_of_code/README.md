@@ -60,6 +60,8 @@ This took much too long. Parsing was done easily, but the challenge was in how t
 
 Day 8 (--/--).
 
+This was a much easier task, and was easily done with careful use of regular expression match-and-replace.
+
 ## [day09.clj](day09.clj)
 
 Day 9 (--/--).
