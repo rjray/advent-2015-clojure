@@ -54,6 +54,8 @@ The first somewhat-tricky one. Part 1 went fine, but part 2 tricked me (causing 
 
 Day 7 (--/--).
 
+This took much too long. Parsing was done easily, but the challenge was in how to evaluate the "circuit" while updating the individual input points.
+
 ## [day08.clj](day08.clj)
 
 Day 8 (--/--).
