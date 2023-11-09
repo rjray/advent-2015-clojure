@@ -66,6 +66,14 @@ This was a much easier task, and was easily done with careful use of regular exp
 
 Day 9 (--/--).
 
+This was a train-wreck, in that it is clearly a variation of the Traveling Salesman Problem so I pulled out code from the Stanford Algorithms Specialization classes I took through Coursera years ago. This gave me a wrong answer for part 1, because that algorithm (the dynamic programming approach to TSP) was a slightly different problem than this one.
+
+I solved this with brute force, and part 2 turned out to be trivial to do given Clojure's functional nature. See [day09bis.clj](day09bis.clj) (next) for the notes on the actual DP approach. It needs some rewriting before I can get it working.
+
+## [day09bis.clj](day09bis.clj)
+
+This file has the dynamic programming approach, adapted from code I wrote some years ago. It is currently incomplete.
+
 ## [day10.clj](day10.clj)
 
 Day 10 (--/--).
