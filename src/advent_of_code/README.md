@@ -78,6 +78,8 @@ This file has the dynamic programming approach, adapted from code I wrote some y
 
 Day 10 (--/--).
 
+After the toils of day 9, this was extremely easy. A large part of that was due to Clojure's core `partition-by` primitive. This made the total file-length the shortest since day 1, line-wise.
+
 ## [day11.clj](day11.clj)
 
 Day 11 (--/--).
