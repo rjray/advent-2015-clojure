@@ -84,6 +84,8 @@ After the toils of day 9, this was extremely easy. A large part of that was due 
 
 Day 11 (--/--).
 
+This was some challenging string-manipulation for faux password generation. It turned out to be much easier when converting the letters to numeric values, doing the processing, then converting them back to letters. There was a certain trickiness to it, in that had I not read the description and examples extremely carefully I might have gotten another wrong answer.
+
 ## [day12.clj](day12.clj)
 
 Day 12 (--/--).

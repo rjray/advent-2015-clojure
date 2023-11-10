@@ -8,7 +8,7 @@ The `resources` directory contains the input data for each day. These files are 
 
 ## Stats
 
-Number of answers correct on first submission: 18/20 (90%)
+Number of answers correct on first submission: 20/22 (90.91%)
 
 Highest finish for first half: N/A
 
