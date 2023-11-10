@@ -90,6 +90,12 @@ This was some challenging string-manipulation for faux password generation. It t
 
 Day 12 (--/--).
 
+This was parsing out numerical values in JSON. I used `clojure.data.json` for the parsing. In part 1, I originally solved it by just pulling all the numbers out via `re-seq` and totalling them. It wasn't until part 2 that I had to "really" work.
+
+For part 2, I used `clojure.walk/prewalk` to locate every object that had a "red" value for any key and replace that object with a 0. This required the parsed JSON, which was then passed to a recursive fn to walk the data and gather the numbers. To test this, I rewrote part 1 to use parsed JSON and the `sum-up` fn.
+
+So what is committed here isn't quite what I submitted the answer for part 1 with. But it got the right answer for part 1 and then part 2.
+
 ## [day13.clj](day13.clj)
 
 Day 13 (--/--).
