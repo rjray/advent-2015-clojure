@@ -22,3 +22,11 @@
   "Parse out all numbers in `line` that are integers (longs)"
   [line]
   (map parse-long (re-seq #"-?\d+" line)))
+
+;; Like the core time macro, but rather than printing the elapsed time it
+;; returns a list of (result, time).
+(defmacro time-it [expr]
+  `(let [start# (. System (nanoTime))
+         ret#   ~expr
+         end#   (/ (double (- (. System (nanoTime)) start#)) 1000000.0)]
+     (list ret# end#)))
