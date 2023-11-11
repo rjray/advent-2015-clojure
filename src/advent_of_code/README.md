@@ -118,6 +118,14 @@ I am a little annoyed, though, that I've made three incorrect submissions alread
 
 Day 15 (--/--).
 
+This was an optimization problem of a form I haven't seen before. I'll need to find out exactly what, so I can understand it better.
+
+For the solutions, I borrowed a `partitions` fn from the reddit solutions thread for this day. That produced all the combinations of measurements for the ingredients based on the assumption that everything had to appear at least once.
+
+Part 1 was just a matter of scoring each mix and finding the maximum score. I used the `partial` primitive several times for this, the first time I've really used it extensively.
+
+Part 2 upped the ante by requiring that only recipes that produced exactly 500 calories be considered. This was pretty similar to part 1, only requiring that each score also have a calorie value associated with it. Once those were calculated, `group-by` was used to group them by the calorie score. All the matches for 500 were then sorted by score and the highest one taken.
+
 ## [day16.clj](day16.clj)
 
 Day 16 (--/--).
