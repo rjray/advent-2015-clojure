@@ -108,6 +108,12 @@ Part 2 was just to add yourself in, with all "weights" between you and others be
 
 Day 14 (--/--).
 
+An interesting pair of problems. Part 1 was to see which of 9 reindeer would fly the farthest in a given timespan, based on their flying speed, endurance, and rest-time needed between flying periods. Doing it was pretty straightforward, though an error in the math of my algorithm cost me in terms of my first submission being wrong.
+
+Part 2 was only a little trickier; instead of finding the one who'd flown the farthest, Santa wanted to use a points system to find the one that was in the lead the most often, at one-second intervals. Scoring was one point for each racer per second that they were in the lead, with the possibility that there might be a tie for the lead at any given `t`. At first I was concerned that the data structure I had chosen to represent the reindeer might be clumsy for part 2, but in the end it worked out fine.
+
+I am a little annoyed, though, that I've made three incorrect submissions already by day 14.
+
 ## [day15.clj](day15.clj)
 
 Day 15 (--/--).
