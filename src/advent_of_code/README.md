@@ -100,6 +100,10 @@ So what is committed here isn't quite what I submitted the answer for part 1 wit
 
 Day 13 (--/--).
 
+Taking a cue from day 9, I didn't try to finesse this one at all. Simple brute-force over the permuations of the dinner guests. This time, though, I did optimize a little bit by not calculating permutations that were exact reverses of an existing (already calculated) permuation.
+
+Part 2 was just to add yourself in, with all "weights" between you and others being 0. While this took the permutations from 8! to 9!, the fact that I was only calculating half of them combined with Clojure's lazy sequences made quick work.
+
 ## [day14.clj](day14.clj)
 
 Day 14 (--/--).
