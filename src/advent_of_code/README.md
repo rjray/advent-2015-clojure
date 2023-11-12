@@ -130,6 +130,8 @@ Part 2 upped the ante by requiring that only recipes that produced exactly 500 c
 
 Day 16 (--/--).
 
+This was basically a field-based "grep" problem. Part 1 was solved with simple equality checks, but part 2 called for four of the fields to have different checks. So the first solution was slightly altered to use a map of the search-field keywords to the `=` function, then for the second part `assoc` was used to set the four keywords to either `<` or `>` as needed.
+
 ## [day17.clj](day17.clj)
 
 Day 17 (--/--).
