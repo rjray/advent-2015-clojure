@@ -136,6 +136,10 @@ This was basically a field-based "grep" problem. Part 1 was solved with simple e
 
 Day 17 (--/--).
 
+For this problem, the Clojure combinatorics library made all the difference. In part 1, the task was to find all the possible combinations of a given set of containers, such that their total capacity was 150. For this, I used the `subsets` function from the combinatorics package to generate all (2^20) possible subsets and filtered them by those whose sum equalled 150. There was a slight catch to this approach: there were some duplicated containers, and by itself `subsets` would not have counted them as separate and distinct. That is, two `5` values would show up in an iteration as both present, but the two 5's would not make two distinct iterations themselves. I addressed this by representing each container as a tuple of capacity and index in the list. That made the duplicates appear distinct.
+
+For part 2, the challenge was to determine the minimum number of containers (of any combination) that would total to 150, then determine how many combinations existed that were that size. To do this, I augmented the fn that calculated the value of a combination so that it included the number of containers as a second value. Then `group-by` was used to group all the solutions by their container-count and pulled out the smallest one.
+
 ## [day18.clj](day18.clj)
 
 Day 18 (--/--).
