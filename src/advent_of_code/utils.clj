@@ -30,3 +30,7 @@
          ret#   ~expr
          end#   (/ (double (- (. System (nanoTime)) start#)) 1000000.0)]
      (list ret# end#)))
+
+(defn tee [expr]
+  (print expr "\n")
+  expr)
