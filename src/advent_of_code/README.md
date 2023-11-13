@@ -144,6 +144,10 @@ For part 2, the challenge was to determine the minimum number of containers (of 
 
 Day 18 (--/--).
 
+This was the Conway's Game of Life variant for this year. Worked like previous years, other than some coding errors on my part. In part 1 it took me too long to realize I had `x` and `y` reversed in one place. Once that was found and fixed, the right answer was generated first try.
+
+Part 2 simple fixed the four corners to an always-on state. Here, I made some indexing errors both in setting the corners initially, and in the check-code that ensured the four stayed on. Once those were found and fixed, got the right answer on the first try.
+
 ## [day19.clj](day19.clj)
 
 Day 19 (--/--).
