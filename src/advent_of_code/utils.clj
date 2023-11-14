@@ -31,6 +31,20 @@
          end#   (/ (double (- (. System (nanoTime)) start#)) 1000000.0)]
      (list ret# end#)))
 
-(defn tee [expr]
+(defn tee
+  "Like 'tap' or 'tee', show the value of expr before returning it"
+  [expr]
   (print expr "\n")
   expr)
+
+;; Taken from https://stackoverflow.com/a/3266877/6421
+;;
+;; Get matches for a given regexp *and* their position within the string.
+(defn re-pos
+  "Return a list of pairs of (index, string) for all matches of `re` in `s`"
+  [re s]
+  (loop [m (re-matcher re s), res ()]
+    (if (.find m)
+      (recur m (cons (list (.start m) (.group m)) res))
+      (reverse res))))
+
