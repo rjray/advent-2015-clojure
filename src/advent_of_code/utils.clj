@@ -48,3 +48,26 @@
       (recur m (cons (list (.start m) (.group m)) res))
       (reverse res))))
 
+;; Lazy sequence of primes, taken from Project Euler code repo
+(def primes
+  (concat
+   [2 3 5 7]
+   (lazy-seq
+    (let [primes-from
+          (fn primes-from [n [f & r]]
+            (if (some #(zero? (rem n %))
+                      (take-while #(<= (* % %) n) primes))
+              (recur (+ n f) r)
+              (lazy-seq (cons n (primes-from (+ n f) r)))))
+          wheel (cycle [2 4 2 4 6 2 6 4 2 4 6 6 2 6  4  2
+                        6 4 6 8 4 2 4 2 4 8 6 4 6 2  4  6
+                        2 6 6 4 2 4 6 2 6 4 2 4 2 10 2 10])]
+      (primes-from 11 wheel)))))
+
+;; Determine all prime factors of n
+(defn factorize [n]
+  (loop [x n [p & ps] primes factors []]
+    (cond
+      (= 1 x)           factors
+      (zero? (mod x p)) (recur (/ x p) primes (conj factors p))
+      :else             (recur x ps factors))))
