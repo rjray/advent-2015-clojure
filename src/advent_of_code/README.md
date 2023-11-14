@@ -168,6 +168,10 @@ Part 2 threw an interesting wrench into things, but the hardest part was actuall
 
 Day 21 (--/--).
 
+This one was surprisingly easy, probably because of the ease with which various parts could be done in Clojure. Part 1 was to find the lowest-cost set of equipment that would win the boss fight. Adding "no item" items to the armor and ring lists made it possible to get all the possible sets using some logic around the `cartesian-product` fn from the combinatorics library. Sorting all the sets by their total cost allowed for combining `first` and `map` to get the lowest winning set.
+
+Part 2 was an inverse: find the most-expensive set that would still lose to the boss. In the name of expediency, I just wrote a second filtering fn to get losses, then traversed the cost-list in reverse order. Both parts took about 3 seconds each.
+
 ## [day22.clj](day22.clj)
 
 Day 22 (--/--).
