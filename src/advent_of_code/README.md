@@ -152,6 +152,10 @@ Part 2 simple fixed the four corners to an always-on state. Here, I made some in
 
 Day 19 (--/--).
 
+Not sure how to classify this pair of problems. Part 1 was pretty simple, solvable with regular expression substitutions, `distinct` and `count`.
+
+Part 2 was frustrating. A not-quite-but-actually brute force approach blew out the stack. I struggled with how to reduce the search space before giving up and reading [this reddit response](https://www.reddit.com/r/adventofcode/comments/3xflz8/day_19_solutions/cy4k8ca/) from 2015. It wouldn't have occurred to me to reverse the strings, largely because I had failed to notice that the right-hand side of each production was unique. Either way, it got the right answer.
+
 ## [day20.clj](day20.clj)
 
 Day 20 (--/--).
