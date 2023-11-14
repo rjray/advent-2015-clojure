@@ -160,6 +160,10 @@ Part 2 was frustrating. A not-quite-but-actually brute force approach blew out t
 
 Day 20 (--/--).
 
+My initial take on part 1 was to work from the prime factorization of each house number, to determine the total number of presents it would receive. I thought this would be faster than iterating over each of the elves until a house reached the threshold. However, while this worked, it took just over 13 minutes to run. After looking at some approaches from the 2015 reddit thread, I re-wrote part 1 and got it down to ~1:20. That's the code I've committed here.
+
+Part 2 threw an interesting wrench into things, but the hardest part was actually in verifying the code before I tried it on the puzzle input. Because the key twist was each elf quitting after their 50th house, it was hard to determine when a given house's new value was correct without calculating all the houses to at least 51. Which is basically what I ended up doing: plugging in a value that would take the houses to at least 51, then dumping the final house-scores vector (with `tee` from my [utils.clj](utils.clj) collection) and verifying the value of house 51 (the first one that an elf would have skipped). Part 2 ran even faster than part 1, in the end (roughly 26 seconds).
+
 ## [day21.clj](day21.clj)
 
 Day 21 (--/--).
