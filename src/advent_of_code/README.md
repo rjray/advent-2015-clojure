@@ -176,6 +176,10 @@ Part 2 was an inverse: find the most-expensive set that would still lose to the 
 
 Day 22 (--/--).
 
+After puzzling over what should have been a viable BFS approach, I dropped the corre of the algorithm and re-did it as DFS, with the depth bounded on each time through, until a solution was found. Part 2 was a simple matter of adding an application of a function to the player's HP on each of their turns, then setting up part 1 to set that function to `identity` (and part 2 setting it to `dec`) so that there was really no code difference between the two parts.
+
+The code takes a while to run, there may be ways to optimize it and cut down the run-time. But it's understandable as-is.
+
 ## [day23.clj](day23.clj)
 
 Day 23 (--/--).
