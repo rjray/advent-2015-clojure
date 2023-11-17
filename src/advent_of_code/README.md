@@ -192,6 +192,10 @@ Part 2 was just as easy, calling for the same "program" to execute, only with th
 
 Day 24 (--/--).
 
+After some false starts with playing with the `partitions` function of the combinatorics package, I realized a couple of key points: (1) Whatever the smallest number of packages totalling to the size was, that was the number of packages I was looking for; (2) I didn't have to care about the remaining groups because I only cared about groups of size `n` that equalled the computed size; (3) I could solve (1) with `subsets` as a lazy sequence and (2) with a combination of `filter` and `combinations` in which the combinations were strictly bounded to size `n`.
+
+Part 1 took 4.7s to run. Part 2 was to run the same problem with 4 groups rather than 3. Since the only value that was altered by this was the `size` value, the code all worked again and yielded the part 2 answer in 3.4s.
+
 ## [day25.clj](day25.clj)
 
 Day 25 (--/--).
