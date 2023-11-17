@@ -184,6 +184,10 @@ The code takes a while to run, there may be ways to optimize it and cut down the
 
 Day 23 (--/--).
 
+Another surprisingly-easy one, given that this is day 23. This was a "simulate a machine" puzzle, with a VM that has 2 registers and 6 instructions. Unlike previous years I've done, I chose to use keywords more pervasively this time. That made the opcode look-up much easier. My initial code forgot to take into account that the conditional jump instructions would still advance the program counter by 1 if the condition failed. This led to the first try on the real data resulting in an infinite loop. Once that was found and addressed, part 1 finished in about 3 seconds.
+
+Part 2 was just as easy, calling for the same "program" to execute, only with the `a` register starting at 1 rather than 0.
+
 ## [day24.clj](day24.clj)
 
 Day 24 (--/--).
