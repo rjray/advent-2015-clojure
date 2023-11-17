@@ -199,3 +199,5 @@ Part 1 took 4.7s to run. Part 2 was to run the same problem with 4 groups rather
 ## [day25.clj](day25.clj)
 
 Day 25 (--/--).
+
+As is typical, there was only a part 1 for today. It involved finding a specific element from a sequence as indexed by triangular matrix. Computing each sequence value was straightforward, and use of `nth` and `iterate` over the fn that calculated the values took care of that. The hard part was getting the proper index to use, given the row/column from the input. For that, I turned to reddit. Afterwards, I looked at triangular matrix properties, to see if I could have found the algorithm myself. But the style of matrix used in the problem doesn't quite align, so I didn't dig too deeply. As it was, the solution was generated in 4.9s.
