@@ -1,5 +1,11 @@
 (ns advent-of-code.utils
-  (:require [clojure.string :as str]))
+  (:require [clojure.string :as str]
+            [clojure.java.io :as io]))
+
+(defn read-input
+  "Read in the content of the given day-file and return as a blob"
+  [day]
+  (slurp (io/resource day)))
 
 (defn to-blocks
   "Turn a blob (probably from `slurp`) into a seq of blocks"
@@ -21,10 +27,10 @@
 (defn parse-out-longs
   "Parse out all numbers in `line` that are integers (longs)"
   [line]
-  (map parse-long (re-seq #"-?\d+" line)))
+  (map parse-long (re-seq #"[-+]?\d+" line)))
 
 ;; Like the core time macro, but rather than printing the elapsed time it
-;; returns a list of (result, time).
+;; returns a list of (result, time). Time value returned is in milliseconds.
 (defmacro time-it [expr]
   `(let [start# (. System (nanoTime))
          ret#   ~expr
@@ -64,8 +70,9 @@
                         2 6 6 4 2 4 6 2 6 4 2 4 2 10 2 10])]
       (primes-from 11 wheel)))))
 
-;; Determine all prime factors of n
-(defn factorize [n]
+(defn factorize
+  "Determine all prime factors of n"
+  [n]
   (loop [x n [p & ps] primes factors []]
     (cond
       (= 1 x)           factors
